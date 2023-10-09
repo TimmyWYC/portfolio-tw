@@ -1,0 +1,10 @@
+<div id="main">
+    <div>
+        <h1>List of all persons</h1>
+        {{#each listHumans}}
+            <div>
+                <a href="http://localhost:8080/humans/{{id}}">- {{id}}: {{name}}</a>
+            </div>
+        {{/each}}
+    </div>
+</div>

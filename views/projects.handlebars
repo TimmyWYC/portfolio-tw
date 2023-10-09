@@ -1,0 +1,25 @@
+<div id="main">
+    <div>
+        <h1>My projects</h1>
+
+        {{#if hasDatabaseError}}
+        <div>
+            problem with the databasee:</div><br />
+            {{theError}}
+        </div>
+        
+        {{else}}
+            <div class="projectCards">
+                {{#each projects}}
+                    <div class="card">
+                        <div>
+                            <h1>{{pname}}</h1>
+                            <p> </p>
+                            <div>{{pyear}}</div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{/if}}
+    </div>
+</div>

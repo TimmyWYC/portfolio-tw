@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: content-box;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu {
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+
+a {
+    color: rgb(128 127 226);
+    margin: 20px;
+    font-size:x-large;
+    text-decoration: none; /* Remove the default underline */
+}
+
+#main {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 96px;
+    margin-top: 32px;
+    box-sizing: content-box;
+    /*border: 3px solid gray;*/
+}
+.projectCards {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    width: 200px;
+    margin: 20px;
+    flex: 1; /* Each div takes up equal width */
+    min-width: 0; /* Allow shrinking if necessary */
+}
