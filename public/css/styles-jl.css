@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-#menu {
+header#menu {
     background-color: black;
     width: 100%;
     text-align: center;
@@ -37,9 +37,26 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
+
 .card {
-    width: 200px;
+    width: 100%;
+    max-width: 300px;
     margin: 20px;
-    flex: 1; /* Each div takes up equal width */
-    min-width: 0; /* Allow shrinking if necessary */
+    flex: 0 0 calc(20% - 40px); /* Adjust the percentage value as needed */
+    min-width: 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.card p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.to-the-right {
+    color: rgb(128 127 226);
+    float: right;
+    
 }

@@ -2,20 +2,32 @@
     <div>
         <h1>My projects</h1>
 
+        {{#if isAdmin}}
+            <div>
+                <a href="/projects/new"> New Project</a>
+            </div>
+        {{/if}}
+
         {{#if hasDatabaseError}}
         <div>
             problem with the databasee:</div><br />
             {{theError}}
         </div>
-        
         {{else}}
             <div class="projectCards">
                 {{#each projects}}
                     <div class="card">
                         <div>
-                            <h1>{{pname}}</h1>
+                            <a href="http://localhost:8080/projects/{{pid}}"><h1>{{pname}}</h1></a>
                             <p> </p>
                             <div>{{pyear}}</div>
+                        </div>
+                        <div class="cardFooter">
+                            {{#if ../isAdmin}}
+                                <div>
+                                    <a href="/projects/update/{{pid}}"> Modify </a> - <a href="/projects/delete/{{pid}}"> Delete </a>
+                                </div>
+                            {{/if}}
                         </div>
                     </div>
                 {{/each}}

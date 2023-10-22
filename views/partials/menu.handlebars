@@ -1,12 +1,21 @@
 <header id="menu">
     <div>
         <div>
-            <a href="/"> Home </a>
-            <a href="/humans"> Humans </a>
-            <a href="/projects"> Projects </a>
-            <a href="/about"> About </a>
-            <a href="/contact"> Contact </a>
-            <a href="/login"> login </a>
+            <section>
+                <a href="/"> Home </a>
+                <a href="/humans"> Humans </a>
+                <a href="/projects"> Projects </a>
+                <a href="/about"> About </a>
+                <a href="/contact"> Contact </a>
+                {{#if isLoggedIn}}
+                    <div class="to-the-right"> 
+                        {{name}} &nbsp; &nbsp;
+                        <a href="/logout"> Logout </a>
+                    </div>
+                {{else}}
+                    <a href="/login"> Login </a>
+                {{/if}}
+            </section>
         </div>
     </div>
 </header>
